@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>")
+    }
+
+    function mostra(frase) {
+        document.write("******************")
+        pulaLinha()
+        document.write(frase)
+        pulaLinha()
+    }
+
+    var colonizacao = 1500
+    var anoAtual = 2021
+    var calculo = (anoAtual - colonizacao) / 28
+
+    mostra("ate o ano de " + anoAtual + " ja se passaram " + Math.round(calculo) + " geracoes desde o ano de 1500")
+
+</script>

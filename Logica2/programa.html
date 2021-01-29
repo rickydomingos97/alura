@@ -1,0 +1,47 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+//criamos a variavel tela
+var tela = document.querySelector('canvas');
+// determinamos qual o tipo de desenho que vai ser construido
+var pincel  = tela.getContext('2d');
+
+//determinamos a cor do pincel
+pincel.fillStyle = 'lightgrey';
+//delimitamos o limite de preenchimento do pincel
+// comeca com 0 no eixo X e 0 no eixo Y e preenche ate 600 no eixo X e 400 no eixo Y
+pincel.fillRect( 0, 0, 600, 400 );
+
+pincel.fillStyle = 'green';
+pincel.fillRect(0, 0, 200, 400);
+
+pincel.fillStyle = 'red';
+pincel.fillRect(400, 0, 200, 400);
+
+//desenhando um triangulo
+
+// definimos a cor yellow do triangulo
+pincel.fillStyle = 'yellow';
+//iniciamos o caminhp a ser percorrido
+pincel.beginPath();
+//movemos o pincel no eixo X e Y
+pincel.moveTo(300, 200);
+//desenhamos uma linha do ponto 200 ao 400
+pincel.lineTo(200, 400);
+//desenhamos outra linha do eixo X ao Y com 400 e 400
+pincel.lineTo(400, 400);
+// preenchemnos o triangulo com o fill
+pincel.fill()
+
+//circulo
+//determinamos a cor blue para o fill
+pincel.fillStyle = 'blue';
+//iniciamos um novo caminho para o pincel
+pincel.beginPath();
+//determinamos os limites e tamanho do circulo
+pincel.arc(300, 200, 50, 0, 2 * 3.14);
+//preenchemos o circulo
+pincel.fill()
+
+</script>

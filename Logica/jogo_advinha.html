@@ -1,0 +1,24 @@
+<script>
+    function pulaLinha() {
+        document.write("<br><br>")
+    }
+
+    function mostra(frase) {
+        document.write(frase)
+        pulaLinha()
+    }
+    
+    var numeroPensado = Math.round(Math.random() * 10)
+    
+    var chute = parseInt(prompt("Digite um numero:"))
+
+    if(chute != numeroPensado) {
+        mostra("voce digitou " + chute + ". Tente novamente")
+    } else {
+        mostra("Voce acertou!")
+    }
+
+    mostra(numeroPensado)
+
+
+</script>

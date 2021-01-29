@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Consumo</title>
+</head>
+<body>
+    <h3>Alcool ou Gasolina?</h3>
+    <script>
+
+        function pulaLinha() {
+            document.write("<br>")
+        }
+        
+        var tanque = 40
+        var caminhoComGasolina = 480
+        var caminhoComAlcool = 300
+        var consumoGasolina = caminhoComGasolina / tanque
+        var consumoAlcool = caminhoComAlcool / tanque
+
+        document.write("O seu carro tem um tanque de " + tanque + " litros a gasolina. <br>" + "E voce percorreu a distancia de " + caminhoComGasolina + " km. <br>")
+        document.write("O seu consumo foi de " + consumoGasolina + " km por litro")
+
+        pulaLinha()
+        pulaLinha()
+
+        document.write("O seu carro tem um tanque de " + tanque + " litros a Alcool <br>")
+        document.write("E voce percorreu uma distancia de " + caminhoComAlcool + "km <br>")
+        document.write("O seu consumo foi de " + consumoAlcool + " km por litro")
+
+    </script>
+</body>
+</html>

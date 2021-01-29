@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+    // criado o array dos produtos
+    var produtos = [];
+    // criando a var quantidade e pedindo ao usuario para poder inserir os produtos na lista
+    var quantidade = parseInt(prompt("Digite a quantidade de produtos:"));
+
+    //criar a variavel contador para contar os produtos no array
+    var contador = 1;
+
+    while (contador <= quantidade) {
+        //enquanto o contador for <= do que a quantidade de produtos vai solicitar ao usuario que insira
+        //mais produtos e inseri o numero do produto na lista somando ao contador
+        var produto = prompt("Insira o nome do produto:");
+
+        // verifica se o item ja foi adicionado ao array, se nao ele retorna false e continua a perguntar para inserir items a lista
+        var achou = false;
+
+        /*
+        cria a variavel posicao (para varrer as diferentes posições do array) e enquanto o numero de posicoes for menor que a quantidade de posicoes do array faz esta verificacao
+        */
+        /*
+    incrementa em 1 a posicao, para passar para a proxima posicao do vetor
+    */
+        for (posicao = 0; posicao < produtos.length; posicao++) {
+            //if true
+            //o valor ja esta armazenado, entao deu match no array (true)
+            //informa ao usuario que ja foi digitado esse item (alert)
+            if (produtos[posicao] == produto) {
+                achou = true;
+                break;
+            }
+            //if false
+            /*como o valor informado nao esta armazenado no array, ele é acrescentado no array*/
+            /*incrementa o contador +1 para passar para o proximo ingrediente,
+            ate que chegue ao numero de ingredientes informado pelo usuario*/
+            if (achou == false) {
+                produtos.push(produto);
+                contador++;
+            }
+        }
+
+    }
+</script>

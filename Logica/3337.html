@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var contador = 30;
+    
+    while(contador >= 30 && contador <= 40) {
+        if(contador == 33 || contador == 37) {
+            contador = contador + 1 // essa linha vai adicionar mais 1 ao numero 33 e 37 para pular esses numeros
+        }
+
+
+        mostra(contador);
+        contador = contador + 1; // incrementa de dois em dois
+    }
+    mostra("FIM");
+</script>

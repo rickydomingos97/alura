@@ -1,0 +1,31 @@
+<script>
+    function pulaLinha() {
+        document.write("<br><br>")
+    }
+
+    function mostra(frase) {
+        document.write(frase)
+        pulaLinha()
+    }
+
+    var numeroPensado = 4 /* Math.round(Math.random() * 10) */
+
+    var tentativas = 1;
+    while ( tentativas <= 3) {
+        var chute = parseInt(prompt("Digite um numero:"))
+
+        if (chute != numeroPensado) {
+            mostra("voce digitou " + chute + ". Tente novamente")
+        } else {
+            alert("Voce acertou! O numero pensado era" + numeroPensado)
+            alert("Para jogar novamente recarregar a pagina")
+            tentativas = 3;
+        }
+
+        tentativas++;
+        mostra("fim")
+
+        mostra(numeroPensado)
+
+    }
+</script>

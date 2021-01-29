@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    convidados = parseInt(prompt("Qual a quantidade de covidados?"))
+    vips = parseInt(prompt("qual a quantidade de vips?"))
+    total = convidados + vips
+
+    var c = parseInt(10)
+    mostra(c)
+
+    mostra("o NUMERO DE CONVIDADOS NO TOTAL FOI DE: " + total)
+</script>

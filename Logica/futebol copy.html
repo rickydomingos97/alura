@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <script>
+        function pulaLinha() {
+
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        vitorias = parseInt(prompt("Entre com o numero de vitorias: "))
+        empates = parseInt(prompt("Entre com o numero de empates: "))
+        pontos = (vitorias * 3) + empates
+        anoAnterior = 28
+
+        mostra(anoAnterior + " foram os pontos do seu time no ano anterior")
+        mostra("Os pontos do seu time sao " + pontos)
+
+        if (pontos > anoAnterior) {
+            mostra("O seu time esta melhor do que no ano passado")
+        }
+
+        if (pontos < anoAnterior) {
+            mostra("O seu time esta pior do que no ano passado")
+        }
+        
+
+        if (pontos == anoAnterior) {
+            mostra("O seu time esta igual ao ano passado")
+        }
+    </script>
+</body>
+
+</html>
