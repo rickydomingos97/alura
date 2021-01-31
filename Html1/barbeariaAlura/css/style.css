@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap');
+
+:root {
+    --color-background: #f3f3f3;
+    --color-text: #414040;
+    --color-secondary: #666666;
+    --color-red:#f03d3d;
+    --background-beneficios: #315868;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+body {
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    max-width: 900px;
+    background: var(--color-background);
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text);
+
+}
+
+#banner {
+    object-fit: cover;
+    height: 20rem;
+    width: 60rem;
+    width: 100%;
+    margin: 3rem 1rem 2rem;
+    border-radius: 15px;
+}
+
+.principal {
+    padding: 3rem;
+}
+
+.titulo-principal {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.titulo-centralizado {
+    margin: 1rem;
+    text-align: center;
+
+}
+
+p {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 2rem 1rem;
+    font-weight: 100;
+    text-align: center;
+}
+#mission {
+    text-align: center;
+}
+
+#qualidade {
+    color:var(--color-red);
+}
+
+.itens {
+    font-style: italic;
+}
+
+.beneficios {
+    
+    background: var(--background-beneficios);
+    color: var(--color-background);
+    padding: 2rem;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 1.5rem
+}
+
+.beneficios h3 {
+    margin-bottom: 30px;
+}
+
+.beneficios ul {
+    /* block sempre vai ocupar a linha mesmo que o elemento diminua e preencha somente a metade*/
+    /* inline nao permite alterar espacamento interno ou externo */
+    display:inline-block; 
+    /* Ocupa o espaco do seu conteudo + permite mexer na largura e espacamento*/
+    vertical-align: top; /* para mandar os itens li para cima*/
+    width: 30%;
+    /* margin-right: 10%; */
+    
+    
+}
+
+.beneficios li {
+    line-height: 2rem;
+    margin-left: 7%;
+}
+
+.imagem-beneficios {
+    width: 60%;
+    border-radius:15px;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 375px) {
+
+    * {
+        margin: 1rem;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #banner {
+        object-fit: cover;
+        width: 0.5rem;
+        height: auto;
+        width: 100%;
+        margin: auto;
+        border-radius: 15px;
+    }
+
+
+    h1 {
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    }
+
+    .imagem-beneficios {
+        width: 30px;
+        border-radius:15px;
+    }
+}
