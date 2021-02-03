@@ -261,7 +261,12 @@ td, th {
 	@media screen and (max-width: 480px) { 
 		.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
 			width: auto;
-			margin: 0 10px;
+			margin: 1px0 10px;
+		}
+
+		header {
+			font-size: 22px;
+			text-align: center;
 		}
 		
 		nav a {
@@ -300,4 +305,27 @@ td, th {
 			width: 90%;
 			margin-top: 50px;
 		}
+
+		/* CONTATO */
+
+		.main-contato {
+			width: 158%;
+			margin: 25% 12px;
+		}
+
+		.checkbox {
+			font-size: 14px;
+		}
+
+		.enviar {
+			width: 59%;
+			align-items: center;
+		}
+
+		.horario {
+			width: 59%;
+		}
 	}
+
+	
+
