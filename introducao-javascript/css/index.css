@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap');
+
+*{
+	box-sizing: border-box;
+ }
+
+body{
+	/* font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; */
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	color: #555555;
+	/* background: #121214; */
+	background: #f9fbfd;
+}
+
+header {
+	height: auto;
+	top: 0;
+	color: #e1e1e6;
+	margin-bottom: 1em;
+	padding: 0px 20px;
+	background:#a1b0c0;
+	/* background: rgb(32, 32, 36) none repeat scroll 0% 0%; */
+}
+
+header h1{
+	font-size: 2em;
+	display:inline-block;
+	vertical-align:	middle;
+}
+
+h1.titulo {
+	padding: 0;
+}
+
+header h2{
+	font-size: 2em;
+	display:inline-block;
+	vertical-align:	middle;
+	background-color: #a1b0c0; ;
+	
+}
+
+header .container:before{
+	content: '';
+	display:inline-block;
+	height: 100%;
+	vertical-align:	middle;
+	
+	
+}
+
+.container {
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	/* background:#a1b0c0; */
+/* 	background-color: #32a7e5;
+	background: #202024; */
+	padding: 30px;
+	border-radius: 5px;
+}
+
+.container-header {
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	padding: 2em;
+	/* color: #555; */
+}
+
+.titulo {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.container h2, td {
+	color: #434385;;
+	font-weight: 300;
+	
+}
+
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
+
+section.container {
+	margin-top: 3em;
+}
+
+section h2{
+	font-size: 3em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
+
+table{
+	width: 100%;
+	margin-bottom : .5em;
+	table-layout: fixed;
+
+}
+
+td, th {
+	padding: 1em;
+	margin: 0;
+	border: 1px solid #e1e1e6;
+	text-align: center;
+}
+
+th{
+	font-weight: bold;
+	padding: 20px;
+	/* background-color: #8257e6; */
+	background-color: #00c86f;
+	/* color: #e1e1e6; */
+	color: rgb(4, 32, 65);
+}
+
+label{
+	color: #555;
+	display: block;
+	margin-bottom: .2em;
+}
+
+.campo{
+	margin: 0;
+	padding-bottom: 1em;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: .7em;
+	width: 100%;
+}
+
+.campo-medio{
+	display: inline-block;
+	padding-right: .5em;
+}
+
+.grupo{
+	width: 32%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+button{
+	padding: .5em 2em;
+	border: 0;
+	border-bottom: 3px solid;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin: 0;
+	margin-top: -3px;
+	color: #fff;
+	background-color:#0c8cd3;
+	border-color: #04324c;
+	width: 20%;
+    display: block;
+    clear: both;
+    margin: 10px 0px;
+
+}
+
+button:active{
+	margin-top: -3px;
+	border: 0;
+	background-color: #00c86f;
+	margin: 10px 0px;
+	border: 0;
+	border-bottom: 3px solid;
+	border-color: #04324c;
+
+}
+
+button[disabled=disabled], button:disabled {
+    background-color: gray;
+	border-color: darkgray;
+
+}
+
+.adicionar-paciente{
+    margin-top: 30px;
+}
+
+.campo-invalido{
+	border: 1px solid red;
+}
+
+.paciente-invalido {
+	background-color: #d74254;
+}
+
+.titulo:hover {
+	cursor: pointer;
+}
