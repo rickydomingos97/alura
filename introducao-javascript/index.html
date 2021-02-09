@@ -10,11 +10,14 @@
 	</head>
 	<body>
 
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+
 		<header>
 			<div class="container-header">
 				<h1 class="titulo" id="titulo">Aparecida Nutrição</h1>
 			</div>
-		</header>
+		</header classe="fixed-header">
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
@@ -75,8 +78,9 @@
 		<!-- FORMULARIO DE ADICAO DE PACIENTE -->
 <section class="container">
     <h2 id="titulo-form">Adicionar novo paciente</h2>
+	<span id="mensagens-erro"></span>
     <form id="form-adiciona">
-        <div class="grupo">
+        <div class="grupo-nome">
             <label for="nome">Nome:</label>
             <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
         </div>
@@ -90,7 +94,7 @@
         </div>
         <div class="grupo">
             <label for="gordura">% de Gordura:</label>
-            <input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+            <input id="gordura" type="text" placeholder="digite a % de gordura do seu paciente" class="campo campo-medio">
         </div>
 
         <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
@@ -100,5 +104,6 @@
 
 		<script src="js/calcula-imc.js"></script>
 		<script src="js/form.js"></script>
+		<script src="js/remover-paciente.js"></script>
 	</body>
 </html>
