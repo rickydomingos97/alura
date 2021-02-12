@@ -1,37 +1,45 @@
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
+
 botaoAdicionar.addEventListener("click", (event) => {
+
     event.preventDefault();
 
     var form = document.querySelector("#form-adiciona");
-     // EXTRAINDO INFORMACOES DO PACIENTE DO FORM //
-     var paciente = obtemPAcienteDoFormulario(form);
-    // CRIA A TD E A TR DO PACIENTE //
-    var pacienteTr = montaTr(paciente);
+    var paciente = obtemPacienteDoFormulario(form);
 
-    // SE O PACIENTE NAO FOR VALIDO, O return VAZIO NAO VAI ADICIONAR O PACIENTE NA TABELA //
     var erros = validaPaciente(paciente);
-    if(erros.length > 0){
+    if (erros.length > 0) {
         exibeMensagensDeErro(erros);
         return;
     }
 
-    
-    // ADICIONANDO O PACIENTE NA TABELA //
-    var tabela = document.querySelector("#tabela-pacientes");
+    /* TIRAMOS DAQUI O MONTAR A TABELA,
+    TIRAMOS O BUSCAR A TABELA
+    E TIRAMOS O INSERIR PACIENTE NA TABELA
+    E TRANSFORMAMOS NUMA FUNCAO
+    E RECOLOCAMOS OS ITENS DE VOLTA NA FUNCAO DO BOTAO */
 
-    tabela.appendChild(pacienteTr);
+    adicionaPacienteNaTabela(paciente);
 
-// LIMPAR OS CAMPOS APOS ADICIONAR UM PACIENTE COM SUCESSO //
     form.reset();
-    // LIMPANDO AS MENSAGENS DE ERRO DAS LI DEPOIS DE ADICIONAR UM PACIENTE CORRETAMENTE //
     var mensagemErro = document.querySelector("#mensagens-erro");
     mensagemErro.innerHTML = "";
 
 });
 
-function exibeMensagensDeErro(erros){
+/* ESSA FUNCAO VAI ADOCIONAR O PACIENTE NA TABELA
+PRIMEIRO MONTA A TABELA
+VAI NA TABELA E BUCA A TABELA
+DEPOIS BUSCA O PACIENTE TR E POE NA TABELA
+*/
+function adicionaPacienteNaTabela(paciente) {
+    var pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
+}
+
+function exibeMensagensDeErro(erros) {
     var ul = document.querySelector("#mensagens-erro");
-    // APAGAR AS LI DEPOIS DE PRESSIONAR ADICIONAR BUTTON //
     ul.innerHTML = "";
 
     erros.forEach((erro) => {
@@ -42,7 +50,7 @@ function exibeMensagensDeErro(erros){
 }
 
 
-function obtemPAcienteDoFormulario(form) {
+function obtemPacienteDoFormulario(form) {
 
     var paciente = {
         nome: form.nome.value,
@@ -57,13 +65,13 @@ function obtemPAcienteDoFormulario(form) {
 }
 
 function montaTr(paciente) {
-// CRIAR O TR //
+    // CRIAR O TR //
     var pacienteTr = document.createElement("tr");
-// CRIA A CLASSE PACIENTE NO TR ORIGINAL NO HTML //
+    // CRIA A CLASSE PACIENTE NO TR ORIGINAL NO HTML //
     pacienteTr.classList.add("paciente");
-// CRIANDO AS CLASSES E INSERINDO OS DADOS DO PACIENTE NAS TD //
-// ADICIONA OS TDS NA TABELA //
-// PARA CADA TR VAI POR UM FILHO NUMA TD //
+    // CRIANDO AS CLASSES E INSERINDO OS DADOS DO PACIENTE NAS TD //
+    // ADICIONA OS TDS NA TABELA //
+    // PARA CADA TR VAI POR UM FILHO NUMA TD //
     pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
     pacienteTr.appendChild(montaTd(paciente.peso, "info-peso"));
     pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
@@ -81,32 +89,32 @@ function montaTd(dado, classe) {
     return td;
 }
 
-function validaPaciente(paciente){
+function validaPaciente(paciente) {
 
     var erros = []; // ARRAY DE ERROS CRIADA PARA LISTAR OS ERROS NO HTML //
 
 
-    if(!validaPeso(paciente.peso)){
+    if (!validaPeso(paciente.peso)) {
         erros.push("Peso Invalido!");
     }
 
-    if(!validaAltura(paciente.altura)){
+    if (!validaAltura(paciente.altura)) {
         erros.push("Altura Invalida!");
     }
 
-    if(paciente.nome.length == 0){
+    if (paciente.nome.length == 0) {
         erros.push("O nome nao pode ser vazio!")
     }
 
-    if(paciente.peso.length == 0){
+    if (paciente.peso.length == 0) {
         erros.push("O peso nao pode ficar em branco")
     }
 
-    if(paciente.altura.length == 0){
+    if (paciente.altura.length == 0) {
         erros.push("A altura nao pode ficar em branco")
     }
 
-    if(paciente.gordura.length == 0) {
+    if (paciente.gordura.length == 0) {
         erros.push("a gordura nao pode ficar em branco")
     }
 

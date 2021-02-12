@@ -1,8 +1,29 @@
+// USAMOS O PARENTENODE //
+
 var tabela = document.querySelector("table");
 
-tabela.addEventListener("dblclick", function(event){
-    event.target.parentNode.remove()
-})
+tabela.addEventListener("dblclick", function (event) {
+
+    alert("Voce vai deletar este item!");
+    // Somente executará nosso código caso o elemento em que clicamos seja um <td>
+    if (event.target.tagName == 'TD') {
+        event.target.parentNode.remove()
+        event.target.parentNode.classList.add("fadeOut"); // REMOVE O ITEM COM FADEOUT E SETANDO UM TIMEOUT//
+        setTimeout(() => {
+        event.target.parentNode.remove()
+    }, 500);
+    }else {
+        alert("ESTE ITEM NAO PODE SER DELETADO!")
+    }
+    
+});
+
+
+
+
+
+
+
 
 /*
 // PODEMOS ATE FAZER USANDO VARIAVEIS PARA DEIXAR O CODIGO MAIS EXPLICITO //
