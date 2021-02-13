@@ -12,12 +12,9 @@ body{
 	/* background: #121214; */
 	background: #f9fbfd;
 	background: linear-gradient(
-		to right top, 
-		#6e59b8,
-		#f5c2b1);
+		to right top, #9f8de5, #f6c2b1
+	);
 }
-
-
 
 header {
 	width: 100%;
@@ -144,7 +141,7 @@ label{
 	border: 1px solid #cccccc;
 	padding: 1.5em;
 	width: 100%;
-	border-radius: .2em;
+	border-radius: 0.5em;
 }
 
 .campo-medio{
@@ -161,9 +158,10 @@ label{
 .grupo-nome{
 	width: 100%
 }
+
 button{
 	font-weight: bold;
-	padding: 1.5em 2em;
+	padding: .8em 2em;
 	border: 0;
 	border-radius: 3px;
 	/* border-bottom: 3px solid; */
@@ -172,7 +170,7 @@ button{
 	margin: 0;
 	margin-top: -3px;
 	color: #fff;
-	background-color:#0c8cd3;
+	background-color:#005ff9;
 	border-color: #04324c;
 	width: 20%;
     display: block;
@@ -223,6 +221,7 @@ button#buscar-pacientes{
 	font-size: 1rem;
 	color: red;
 	font-weight: 300;
+	margin-bottom: 1rem;
 }
 .fadeOut{
 	opacity: 0;
@@ -233,13 +232,10 @@ button#buscar-pacientes{
 	margin-bottom: 2em;
 	padding: 1.5em;
 	border: 0;
-	border-radius: 0.2em;
+	border-radius: 0.5em;
 	color:#555555;
 }
 
 .invisivel{
     display: none;
 }
-
-
-
