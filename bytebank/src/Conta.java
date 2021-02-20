@@ -21,8 +21,16 @@ public class Conta {
     		return false;
     	}
     }
-
-    
+// TRANSFERENCIA NA CONTA //
+    public boolean transfere(double valor, Conta destino) {
+        if(this.saldo >= valor) {
+            this.saldo -= valor;
+            destino.deposita(valor);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 // ISSO AINDA NAO EH UMA CONTA //
