@@ -3,6 +3,11 @@ public class Conta {
     int agencia = 3101;
     int numero;
     String titular;
+
+    // METODO EM JAVA //
+    public void deposita(double valor){
+    this.saldo += + valor;
+    }
 }
 
 // ISSO AINDA NAO EH UMA CONTA //
