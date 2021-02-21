@@ -16,12 +16,16 @@ public class Conta {
             System.out.println("voce retirou!");
     		return true;
     	} else {
-            System.out.println("voce nao tem saldo");
-            System.out.println("O seu saldo eh: " + saldo);
+           // System.out.println("voce nao tem saldo");
+           // System.out.println("O seu saldo eh: " + saldo);
     		return false;
     	}
     }
 // TRANSFERENCIA NA CONTA //
+    /*
+    * Quando transferimos, precisamos de um valor e uma conta para receber a transferencia
+    * Nesse caso a Conta destino sera a contaDoRicky no TestaMetodo
+    * */
     public boolean transfere(double valor, Conta destino) {
         if(this.saldo >= valor) {
             this.saldo -= valor;
